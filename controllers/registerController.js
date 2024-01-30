@@ -23,7 +23,7 @@ const handleNewUser = async (req, res) => {
     }
 
     try {
-        const hashedPassword = await bcrypt.hash(username, 10);
+        const hashedPassword = await bcrypt.hash(password, 10);
         const newUser = {
             username: username,
             password: hashedPassword

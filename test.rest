@@ -54,7 +54,18 @@ POST http://localhost:3500/register
 Content-Type: application/json
 
 {
-    "username": "smo",
+    "username": "test",
+    "password": "test123"
+
+}
+
+###
+
+POST http://localhost:3500/auth
+Content-Type: application/json
+
+{
+    "username": "test",
     "password": "test123"
 
 }
