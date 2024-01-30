@@ -1,0 +1,49 @@
+# returning error
+GET http://localhost:3500/blahblah
+Accept: application/json
+
+###
+# returning errors
+GET http://localhost:3500/blahblah
+Accept: text/html
+
+###
+
+# returns all employees
+GET http://localhost:3500/employees
+
+###
+
+# creates new employee
+POST http://localhost:3500/employees
+Content-Type: application/json
+
+{
+    "firstname": "Saeid",
+    "lastname": "Mo"
+}
+
+###
+
+# updates an existing employee
+PUT http://localhost:3500/employees
+Content-Type: application/json
+
+{
+    "id": 3,
+    "firstname": "Saeid",
+    "lastname": "Mohadjer"
+}
+
+###
+
+DELETE http://localhost:3500/employees
+Content-Type: application/json
+
+{
+    "id": 3
+}
+
+###
+
+GET http://localhost:3500/employees/1
