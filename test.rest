@@ -47,3 +47,14 @@ Content-Type: application/json
 ###
 
 GET http://localhost:3500/employees/1
+
+###
+
+POST http://localhost:3500/register
+Content-Type: application/json
+
+{
+    "username": "smo",
+    "password": "test123"
+
+}
