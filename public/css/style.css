@@ -1,14 +1,22 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+p {
+	max-width: 80ch;
 }
 
-body {
-    font-size: 36px;
-    min-height: 100vh;
-    color: #fff;
-    background-color: #000;
-    display: grid;
-    place-content: center;
+h2 {
+	margin-top: 0;
+}
+
+.flex {
+	display: flex;
+	gap: 1em;
+}
+
+.flex > * {
+	padding: 1em;
+	background: #eee;
+}
+
+#api-status {
+	overflow: auto;
+	max-height: 50vh;
 }

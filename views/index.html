@@ -1,16 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
-    <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <h1>Index</h1>
-</body>
+	<h1>OAuth authentication via JWT access and refresh tokens</h1>
+	<p>If you try to access the API endpoint https://api-jwt.vercel.app/api via the button below without logging in first or without a jwt access or refresh token it will return a 401 error as the API expects an authorization header (Bearer &lt;token&gt;) in incoming requests.</p>
+	<p>
+		This implementation uses jwt access and refresh tokens. Access tokens expire after 30 seconds, refresh tokens remain valid for one week. Refresh tokens are stored in HttpOnly cookie to allow access to api even after a page reload. Access tokens are kept in browser memory only.
+	</p>
+	<button id="api">Access API</button>
+	<button id="logout">Logout</button>
+	<br><br>
+    <div class="flex">
+        <form id="register" method="POST" action="/register">
+			<h2>Register</h2>
+			<p><label>Username: <input name="username" required></label></p>
+			<p><label>Password: <input name="password" required></label></p>
+			<button>Register</button>
+		</form>
 
+		<form id="login" method="POST" action="/auth">
+			<h2>Login</h2>
+			<p><label>Username: <input name="username" required></label></p>
+			<p><label>Password: <input name="password" required></label></p>
+			<button>Login</button>
+		</form>
+		<div>
+			<h2>API Result</h2>
+			<div id="api-status"></div>
+		</div>
+	</div>
+    <script type="module" src="/js/main.js"></script>
+</body>
 </html>
