@@ -1,4 +1,5 @@
-// this is a configurable middleware
+// this is a configurable middleware. by using a closure around middleware
+// we can send parameters to middleware. see here for more:
 // https://expressjs.com/en/guide/writing-middleware.html
 const verifyRoles = (...allowedRoles) => {
     return (req, res, next) => {
