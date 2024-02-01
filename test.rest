@@ -11,13 +11,14 @@ Accept: text/html
 
 # returns all employees
 GET http://localhost:3500/employees
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJpYXQiOjE3MDY3MDQ2ODIsImV4cCI6MTcwNjcwNDcxMn0.E9P1qt2Zwc7HZo_Ie-vpmXlUY_LRm_y2uxDNeCOIhBE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySW5mbyI6eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZXMiOls1MTUwLDE5ODQsMjAwMV19LCJpYXQiOjE3MDY3OTgxMTEsImV4cCI6MTcwNjc5ODE3MX0.vtphivVpJJrhJHDFMBbPxdSOCX3sA7nW5PeltYN59XA
 
 ###
 
 # creates new employee
 POST http://localhost:3500/employees
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySW5mbyI6eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZXMiOls1MTUwLDE5ODQsMjAwMV19LCJpYXQiOjE3MDY3OTgxMTEsImV4cCI6MTcwNjc5ODE3MX0.vtphivVpJJrhJHDFMBbPxdSOCX3sA7nW5PeltYN59XA
 
 {
     "firstname": "Saeid",
@@ -29,6 +30,7 @@ Content-Type: application/json
 # updates an existing employee
 PUT http://localhost:3500/employees
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySW5mbyI6eyJ1c2VybmFtZSI6ImVkaXRvciIsInJvbGVzIjpbMTk4NCwyMDAxXX0sImlhdCI6MTcwNjc5Nzk1MSwiZXhwIjoxNzA2Nzk4MDExfQ.VWRRv1gvP1D6m7LXwblkDfFOXh8k4gC-r7oYzP_Q9po
 
 {
     "id": 3,
@@ -40,6 +42,7 @@ Content-Type: application/json
 
 DELETE http://localhost:3500/employees
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySW5mbyI6eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZXMiOls1MTUwLDE5ODQsMjAwMV19LCJpYXQiOjE3MDY3OTgxMTEsImV4cCI6MTcwNjc5ODE3MX0.vtphivVpJJrhJHDFMBbPxdSOCX3sA7nW5PeltYN59XA
 
 {
     "id": 3
@@ -56,8 +59,8 @@ POST http://localhost:3500/register
 Content-Type: application/json
 
 {
-    "username": "test",
-    "password": "test123"
+    "username": "admin",
+    "password": "test"
 
 }
 
@@ -68,8 +71,8 @@ POST http://localhost:3500/auth
 Content-Type: application/json
 
 {
-    "username": "test",
-    "password": "test123"
+    "username": "admin",
+    "password": "test"
 }
 
 ###
